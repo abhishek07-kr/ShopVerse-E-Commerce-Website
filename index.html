@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- BOOTSTRAP Css CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- if we apply css here then bootstrap only happens.....if we give importance to css then we have to write !important after propertyy ....class has more importance than tag..  -->
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-warning" id="naav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ShopVerse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./product.html">Products</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#elec" >Electronics</a></li>
+                            <li><a class="dropdown-item" href="#men">Men's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#women">Women's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#jewel">Jewellery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cart.html">Cart</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <!-- signup model -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-secondary ms-3" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    SignUp
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">SIGNUP</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">            
+                                <form action="">
+                                    <input class="form-control mb-3" type="text" placeholder="Enter Fullname"
+                                        name="FullName" required>
+                                    <input class="form-control mb-3" type="email" placeholder="Enter E-mail"
+                                        name="email" required>
+                                    <input class="form-control mb-3" type="tel" placeholder="Mobile Number"
+                                        name="mobile" required>
+                                    <input class="form-control mb-3" type="password" placeholder="set password"
+                                        name="set password" required>
+                                    <button type="submit" class="btn btn-success">signup</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- logIn modal -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-secondary ms-3" data-bs-toggle="modal" data-bs-target="#login">
+                    LogIn
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">LOGIN</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+
+                                    <input class="form-control mb-3" type="email" placeholder="Enter E-mail"
+                                        name="email" required>
+                                    <input class="form-control mb-3" type="password" placeholder="Enter Password"
+                                        name="password" required>
+                                    <button type="submit" class="btn btn-success">login</button>
+                                </form>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">New User?</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="fixed-bottom">
+                    <a href="" data-bs-toggle="navbar" data-bs-target="#naav">
+                        <img class="arrw" src="./images/arrow.png" alt="">
+                    </a>
+                </div>
+
+                <!-- image carousel -->
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="1500">
+                            <img src="./images/shop6.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1500">
+                            <img src="./images/elec6.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1500">
+                            <img src="./images/jew13.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="cls col-12 bg-electronics" id="elec" style="height: 100vh;">
+                <h1 class="text-dark">Electronics</h1>
+                <p class="text-black text-start w-75 m-auto">Discover a new world of innovation with our cutting-edge
+                    electronic products—engineered to elevate your lifestyle. Each device combines advanced technology
+                    with sleek, modern design to deliver powerful performance you can rely on every day. Whether you’re
+                    looking to boost productivity, stay seamlessly connected, or enjoy immersive entertainment, our
+                    electronics are crafted to exceed expectations.</p>
+                <a href="./electronics.html">
+                    <button class="btn btn-info text-white">View Electronics Products</button>
+                </a>
+            </div>
+            <div class="col-12 bg-mens" id="men" style="height: 100vh;">
+                <h1 class="text-dark">Men's Clothing</h1>
+                <p class="text-white text-start w-75 m-auto">Elevate your style with our exclusive collection of men’s
+                    clothing—where comfort meets confidence. Designed for the modern man, each piece blends premium
+                    fabrics, tailored cuts, and timeless style to create looks that work effortlessly from day to night.
+                    Whether you’re dressing for the office, weekend adventures, or special occasions, our clothing
+                    offers the perfect balance of sophistication and ease.</p>
+                <a href="./men'sclothing.html">
+                    <button class="btn btn-info text-white">View Men's Fashion</button>
+                </a>
+            </div>
+            <div class="col-12 bg-womens" id="women" style="height: 100vh;">
+                <h1 class="text-light">Women's Clothing</h1>
+                <p class="text-black text-start w-75 m-auto">Step into confidence and elegance with our curated
+                    collection of women’s clothing—designed to celebrate your unique style. Each piece blends modern
+                    trends with timeless charm, offering luxurious comfort, flattering fits, and versatile designs that
+                    move effortlessly with you. From chic everyday essentials to stunning statement outfits, our
+                    collection empowers you to express yourself with grace and style.</p>
+                <a href="./women_clothing.html">
+                    <button class="btn btn-info text-white">View Women's Fashion</button>
+                </a>
+            </div>
+            <div class="col-12 bg-jewellery" id="jewel" style="height: 100vh;">
+                <h1 class="text-light">Jewellery</h1>
+                <p class="text-light text-start w-75 m-auto">Illuminate every moment with our exquisite jewellery
+                    collection—crafted to captivate, inspire, and celebrate your unique shine. Each piece is
+                    thoughtfully designed with timeless elegance and modern sophistication, using high-quality materials
+                    that sparkle with every movement. From delicate everyday essentials to bold statement pieces, our
+                    jewellery adds the perfect finishing touch to any look.</p>
+                <a href="./jewelery.html">
+                    <button class="btn btn-info text-white">View Jewellery</button>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS CDN link -->
+
+    <script src="./home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

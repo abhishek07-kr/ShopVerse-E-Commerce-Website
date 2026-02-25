@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap Css CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>Product Details</title>
+    <style>
+        img{
+            transition: all 2s;
+        }
+        img:hover{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body class="container mt-4">
+
+    <div id="detailsBox">Loading...</div>
+
+
+        <script>
+        (async () => {
+            let id = localStorage.getItem("product_id");
+
+            if (!id) {
+                document.getElementById("detailsBox").innerHTML = "<h3>No Product Selected</h3>";
+                return;
+            }
+
+            let product = await (await fetch(`https://fakestoreapi.com/products/${id}`)).json();
+
+            let { title, price, description, image, category, rating } = product;
+
+            document.getElementById("detailsBox").innerHTML = `
+                <div class="row">
+                    <div class="col-4">
+                        <img src="${image}" class="img-fluid">
+                    </div>
+                    <div class="col-5">
+                        <h3>${title}</h3>
+                        <p><b>Price:</b> $${price}</p>
+                        <p><b>Category:</b> ${category}</p>
+                        <p><b>Description:</b> ${description}</p>
+                        <p><b>Rating:</b> ${rating.rate} ⭐</p>
+
+                        <button id="addCartBtn" class="btn btn-primary">Add to Cart</button>
+                        <a href="cart.html" class="btn btn-warning">Go to Cart</a>
+                        <a href="products.html" class="btn btn-secondary">Back</a>
+                    </div>
+                </div>
+            `;
+
+            // Add to Cart function
+            document.getElementById("addCartBtn").onclick = () => {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                cart.push(product);
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                alert("Added to Cart");
+            };
+        })();
+    </script>
+
+    <!-- <script>
+        (async () => {
+            let id = localStorage.getItem("product_id");
+
+            if (!id) {
+                document.getElementById("detailsBox").innerHTML = "<h3>No Product Selected</h3>";
+                return;
+            }
+
+            let product = await (await fetch(`https://fakestoreapi.com/products/${id}`)).json();
+
+            let { title, price, description, image, category, rating } = product;
+
+            document.getElementById("detailsBox").innerHTML = `
+                <div class="row">
+                    <div class="col-4">
+                        <img src="${image}" class="img-fluid" >
+                    </div>
+                    <div class="col-8">
+                        <h3>${title}</h3>
+                        <p><b>Price:</b>$ ${price}</p>
+                        <p><b>Category:</b> ${category}</p>
+                        <p><b>Description:</b> ${description}</p>
+                        <p><b>Rating:</b> ${rating.rate} ⭐</p>
+                        <a href="products.html" class="btn btn-secondary">Back</a>
+                    </div>
+                </div>
+            `;
+        })();
+    </script> -->
+
+</body>
+</html>

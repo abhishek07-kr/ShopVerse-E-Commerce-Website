@@ -1,0 +1,79 @@
+.navbar-brand{
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.navbar-brand:hover{
+    color: wheat;
+
+
+}
+.carousel{
+    height: 90vh;
+    width: 100%;
+}
+.carousel img{
+      height: 90vh;
+      width: 100%;
+}
+
+.bg-electronics{
+    /* image overlays */
+  background: linear-gradient(rgb(0, 0, 0,0.3),rgba(0, 0, 0, 0.3)),  url(./images/computer-2982270_640.jpg) no-repeat center/cover;
+  align-content: center;
+  text-align: center;
+  h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+  }
+}
+.bg-mens{
+    background: linear-gradient(rgb(0, 0, 0,0.3),rgba(0, 0, 0, 0.3)),  url(./images/shirts-591750_640.jpg) no-repeat center/cover;
+  align-content: center;
+  text-align: center;
+  h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+  }
+}
+.bg-womens{
+    background: linear-gradient(rgb(0, 0, 0,0.3),rgba(0, 0, 0, 0.3)),  url(./images/women\'s\ ai-generated-8846481_640.jpg) no-repeat center/cover;
+  align-content: center;
+  text-align: center;
+  h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+  }
+}
+.bg-jewellery{
+    background: linear-gradient(rgb(0, 0, 0,0.3),rgba(0, 0, 0, 0.3)),  url(./images/bangles-2933988_640.jpg) no-repeat center/cover;
+  align-content: center;
+  text-align: center;
+  h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+  }
+}
+.arrw{
+     block-size: 50px;
+     
+
+}
+.card{
+height: 70vh;
+}
+
+.card img{
+  height: 60%;
+}
+
+/* .electronic-btn{
+  display:flex;
+  gap: 10px;
+
+  img{
+    padding: 20px;
+    height: 10rem;
+  }
+} */
